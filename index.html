@@ -31,6 +31,7 @@
         <li><a href="#links"><span>08</span><span class="index-label">Links</span></a></li>
       </ol>
       <div class="section-index-actions">
+        <button class="theme-button" id="theme-toggle" type="button" aria-pressed="false">다크 모드 <span aria-hidden="true">☾</span></button>
         <button class="print-button" id="print-resume" type="button">PDF로 저장 <span aria-hidden="true">↓</span></button>
       </div>
     </nav>
@@ -43,6 +44,23 @@
           SeSAC Microsoft AI 엔지니어 과정에서 Python과 Azure로 머신러닝 모델과 RAG 챗봇을 직접 만들었습니다.
           GitHub로 코드를 관리하고 팀과 공유하며 함께 성장하는 엔지니어가 되겠습니다.
         </p>
+        <div class="about-highlights">
+          <div class="highlight-box">
+            <span class="highlight-label">AI &amp; RAG</span>
+            <strong>근거 기반 챗봇 설계</strong>
+            <p>Azure OpenAI와 AI Search를 결합해 문서 근거와 함께 응답하는 RAG 웹 챗봇 구현</p>
+          </div>
+          <div class="highlight-box">
+            <span class="highlight-label">MLOps</span>
+            <strong>학습·배포 파이프라인 자동화</strong>
+            <p>데이터 정제부터 전이학습 모델 훈련·배포까지 Azure ML 파이프라인으로 자동화</p>
+          </div>
+          <div class="highlight-box">
+            <span class="highlight-label">Collaboration</span>
+            <strong>GitHub 기반 협업 및 CI 검증</strong>
+            <p>형상 관리와 GitHub Actions 자동 검사를 통해 안정적인 팀 개발 문화 실천</p>
+          </div>
+        </div>
       </section>
       <section class="card" id="skills">
         <h2>Skills</h2>
@@ -53,20 +71,42 @@
             <p class="skill-note">데이터 정제 · 학습 파이프라인</p>
           </li>
           <li class="skill-item">
-            <div class="skill-heading"><span>Git · GitHub</span><span class="level">활용</span></div>
-            <div class="skill-meter" role="img" aria-label="Git · GitHub 숙련도: 활용"><span class="filled"></span><span class="filled"></span><span></span></div>
-            <p class="skill-note">코드 관리 · 팀 협업</p>
+            <div class="skill-heading"><span>Azure AI · OpenAI</span><span class="level">활용</span></div>
+            <div class="skill-meter" role="img" aria-label="Azure AI · OpenAI 숙련도: 활용"><span class="filled"></span><span class="filled"></span><span></span></div>
+            <p class="skill-note">RAG 검색 · 프롬프트 설계</p>
           </li>
           <li class="skill-item">
-            <div class="skill-heading"><span>Azure AI · OpenAI</span><span class="level">기초</span></div>
-            <div class="skill-meter" role="img" aria-label="Azure AI · OpenAI 숙련도: 기초"><span class="filled"></span><span></span><span></span></div>
-            <p class="skill-note">RAG 검색 · 프롬프트 설계</p>
+            <div class="skill-heading"><span>Azure ML</span><span class="level">활용</span></div>
+            <div class="skill-meter" role="img" aria-label="Azure ML 숙련도: 활용"><span class="filled"></span><span class="filled"></span><span></span></div>
+            <p class="skill-note">전이학습 · 파이프라인 자동화</p>
+          </li>
+          <li class="skill-item">
+            <div class="skill-heading"><span>Git · GitHub</span><span class="level">활용</span></div>
+            <div class="skill-meter" role="img" aria-label="Git · GitHub 숙련도: 활용"><span class="filled"></span><span class="filled"></span><span></span></div>
+            <p class="skill-note">코드 관리 · 팀 협업 · CI</p>
+          </li>
+          <li class="skill-item">
+            <div class="skill-heading"><span>Django</span><span class="level">기초</span></div>
+            <div class="skill-meter" role="img" aria-label="Django 숙련도: 기초"><span class="filled"></span><span></span><span></span></div>
+            <p class="skill-note">AI 웹 서비스 백엔드 연동</p>
+          </li>
+          <li class="skill-item">
+            <div class="skill-heading"><span>pandas · scikit-learn</span><span class="level">기초</span></div>
+            <div class="skill-meter" role="img" aria-label="pandas · scikit-learn 숙련도: 기초"><span class="filled"></span><span></span><span></span></div>
+            <p class="skill-note">데이터 분석 · 수요 예측 모델링</p>
           </li>
         </ul>
       </section>
       <section class="card" id="projects">
-        <h2>Projects</h2>
-        <article class="project">
+        <div class="project-header">
+          <h2>Projects</h2>
+          <div class="project-filters" role="group" aria-label="프로젝트 유형 필터">
+            <button class="filter-chip is-active" type="button" data-filter="all">전체 (4)</button>
+            <button class="filter-chip" type="button" data-filter="team">팀 프로젝트 (2)</button>
+            <button class="filter-chip" type="button" data-filter="personal">개인 프로젝트 (2)</button>
+          </div>
+        </div>
+        <article class="project" data-category="team">
           <!-- 여기를 내 내용으로 수정 -->
           <h3><a href="project-azure-ml.html">Azure ML 기반 이미지 분류 서비스</a></h3>
           <!-- 여기를 내 내용으로 수정 -->
@@ -81,7 +121,7 @@
           </ul>
           <a class="project-more" href="project-azure-ml.html">프로젝트 자세히 보기 <span aria-hidden="true">→</span></a>
         </article>
-        <article class="project">
+        <article class="project" data-category="team">
           <!-- 여기를 내 내용으로 수정 -->
           <h3><a href="project-rag-chatbot.html">사내 문서 Q&amp;A RAG 챗봇</a></h3>
           <!-- 여기를 내 내용으로 수정 -->
@@ -96,7 +136,7 @@
           </ul>
           <a class="project-more" href="project-rag-chatbot.html">프로젝트 자세히 보기 <span aria-hidden="true">→</span></a>
         </article>
-        <article class="project sample-project">
+        <article class="project sample-project" data-category="personal">
           <span class="sample-badge">추가 예시</span>
           <h3><a href="project-customer-ai.html">Azure AI 기반 고객 문의 분류 도우미</a></h3>
           <p class="meta">개인 프로젝트 예시</p>
@@ -107,7 +147,7 @@
           </ul>
           <a class="project-more" href="project-customer-ai.html">프로젝트 자세히 보기 <span aria-hidden="true">→</span></a>
         </article>
-        <article class="project sample-project">
+        <article class="project sample-project" data-category="personal">
           <span class="sample-badge">추가 예시</span>
           <h3><a href="project-demand-forecast.html">Azure ML 기반 매출 수요 예측</a></h3>
           <p class="meta">개인 프로젝트 예시</p>
@@ -159,11 +199,18 @@
       <section class="card" id="experience">
         <h2>Overseas Experience</h2>
         <article class="education-record">
-          <p class="record-label">해외 경험</p>
+          <p class="record-label">해외 경험 · 글로벌 역량</p>
           <div class="record-heading">
-            <h3>해외 단기 파견 프로그램</h3>
+            <h3>해외 단기 파견 및 글로벌 기술 교류 프로그램</h3>
+            <span class="record-period">2025.07 — 2025.08</span>
           </div>
-          <p class="record-detail">해외 단기 파견 프로그램에 참여했습니다.</p>
+          <p class="record-detail">해외 대학 및 현지 IT 기관 단기 파견 프로그램에 참여해 글로벌 팀 프로젝트와 기술 세미나를 수행했습니다.</p>
+          <p class="record-detail">해외 참가자들과 영어로 협업하며 클라우드 기반 AI 서비스 아이디어를 기획하고 발표했습니다.</p>
+          <ul class="record-tags" aria-label="해외 경험 키워드">
+            <li>Global Teamwork</li>
+            <li>English Presentation</li>
+            <li>Cloud Service Ideation</li>
+          </ul>
         </article>
       </section>
       <section class="card" id="certifications">
@@ -190,23 +237,31 @@
       </section>
       <section class="card" id="awards">
         <h2>Activities &amp; Awards</h2>
-        <p class="section-intro">AI 서비스 개발 해커톤과 클라우드 기반 문서 검색 캡스톤 경진대회에 참여해 수상했습니다.</p>
+        <p class="section-intro">AI 서비스 개발 해커톤과 클라우드 기반 문서 검색 캡스톤 경진대회에 참여해 수상하고, 기술 스터디를 운영했습니다.</p>
         <div class="education-records">
           <article class="education-record activity-record">
-            <p class="record-label">해커톤</p>
+            <p class="record-label">해커톤 수상</p>
             <div class="record-heading">
               <h3>SeSAC 마포캠퍼스 AI 서비스 해커톤</h3>
               <span class="record-period">2027.02</span>
             </div>
-            <p class="record-detail">최우수상</p>
+            <p class="record-detail">최우수상 · Azure OpenAI 기반 문서 질의응답 서비스 구현</p>
           </article>
           <article class="education-record activity-record">
-            <p class="record-label">캡스톤 디자인</p>
+            <p class="record-label">캡스톤 디자인 수상</p>
             <div class="record-heading">
               <h3>클라우드 기반 지능형 문서 검색 시스템</h3>
               <span class="record-period">2025.11</span>
             </div>
             <p class="record-detail">교내 캡스톤 디자인 경진대회 · 우수상</p>
+          </article>
+          <article class="education-record activity-record">
+            <p class="record-label">커뮤니티 · 스터디</p>
+            <div class="record-heading">
+              <h3>생성형 AI · RAG 논문 및 기술 구현 스터디 리더</h3>
+              <span class="record-period">2026.10 — 2027.02</span>
+            </div>
+            <p class="record-detail">주 1회 프롬프트 엔지니어링·벡터 검색 실습 세션 진행 및 GitHub 위키 아카이빙</p>
           </article>
         </div>
       </section>
@@ -221,6 +276,13 @@
             <!-- 여기를 내 내용으로 수정 -->
             <a href="https://vercel.com/">포트폴리오</a>
           </li>
+          <li>
+            <!-- 여기를 내 내용으로 수정 -->
+            <a href="https://velog.io/">기술 블로그</a>
+          </li>
+          <li>
+            <button class="copy-link-button" id="copy-link" type="button">이력서 링크 복사</button>
+          </li>
         </ul>
       </section>
     </main>
@@ -232,8 +294,56 @@
       const sections = document.querySelectorAll("main section[id]");
       const indexLinks = document.querySelectorAll(".section-index a");
       const printButton = document.querySelector("#print-resume");
+      const themeButton = document.querySelector("#theme-toggle");
+      const filterChips = document.querySelectorAll(".filter-chip");
+      const projectItems = document.querySelectorAll("#projects .project");
+      const copyLinkButton = document.querySelector("#copy-link");
 
       printButton.addEventListener("click", () => window.print());
+
+      const applyTheme = (isDark) => {
+        document.documentElement.dataset.theme = isDark ? "dark" : "light";
+        themeButton.setAttribute("aria-pressed", String(isDark));
+        themeButton.innerHTML = isDark
+          ? '라이트 모드 <span aria-hidden="true">☀</span>'
+          : '다크 모드 <span aria-hidden="true">☾</span>';
+      };
+
+      const savedTheme = localStorage.getItem("resume-theme");
+      if (savedTheme === "dark") {
+        applyTheme(true);
+      }
+
+      themeButton.addEventListener("click", () => {
+        const isDark = document.documentElement.dataset.theme !== "dark";
+        applyTheme(isDark);
+        localStorage.setItem("resume-theme", isDark ? "dark" : "light");
+      });
+
+      filterChips.forEach((chip) => {
+        chip.addEventListener("click", () => {
+          const filter = chip.dataset.filter;
+          filterChips.forEach((item) => item.classList.remove("is-active"));
+          chip.classList.add("is-active");
+
+          projectItems.forEach((project) => {
+            const matches = filter === "all" ? true : project.dataset.category === filter;
+            project.hidden = !matches;
+          });
+        });
+      });
+
+      copyLinkButton.addEventListener("click", async () => {
+        try {
+          await navigator.clipboard.writeText(window.location.href);
+          copyLinkButton.textContent = "링크 복사 완료 ✓";
+          setTimeout(() => {
+            copyLinkButton.textContent = "이력서 링크 복사";
+          }, 2000);
+        } catch {
+          copyLinkButton.textContent = "복사 지원 안 됨";
+        }
+      });
 
       const sectionObserver = new IntersectionObserver((entries) => {
         const visibleSections = entries

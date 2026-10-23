@@ -130,7 +130,8 @@ body {
   font-size: 0.98rem;
 }
 
-.print-button {
+.print-button,
+.theme-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -146,7 +147,13 @@ body {
   font-size: 0.84rem;
   font-weight: 700;
   cursor: pointer;
-  transition: background-color 160ms ease, transform 160ms ease;
+  transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+.theme-button {
+  border-color: #d3e2e7;
+  background: rgb(255 255 255 / 92%);
+  color: #275870;
 }
 
 .print-button:hover {
@@ -154,12 +161,20 @@ body {
   background: #1f5b77;
 }
 
-.print-button:focus-visible {
+.theme-button:hover {
+  transform: translateY(-1px);
+  border-color: #b4cfd8;
+  background: #eaf4f7;
+}
+
+.print-button:focus-visible,
+.theme-button:focus-visible {
   outline: 3px solid #87bfce;
   outline-offset: 3px;
 }
 
-.print-button span {
+.print-button span,
+.theme-button span {
   font-size: 1rem;
 }
 
@@ -204,6 +219,44 @@ main {
   margin: 0;
   color: #465b6d;
   line-height: 1.95;
+  word-break: keep-all;
+}
+
+.about-highlights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.highlight-box {
+  padding: 15px 16px;
+  border: 1px solid #e1eaee;
+  border-radius: 13px;
+  background: linear-gradient(145deg, #fbfdfe, #f3f8fa);
+}
+
+.highlight-label {
+  display: block;
+  margin-bottom: 4px;
+  color: #3f8195;
+  font-size: 0.68rem;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+}
+
+.highlight-box strong {
+  display: block;
+  color: #294658;
+  font-size: 0.9rem;
+  font-weight: 750;
+}
+
+.highlight-box p {
+  margin: 6px 0 0;
+  color: #667885;
+  font-size: 0.78rem;
+  line-height: 1.55;
   word-break: keep-all;
 }
 
@@ -293,13 +346,70 @@ main {
   gap: 14px;
 }
 
-#projects > h2 {
+.project-header {
   grid-column: 1 / -1;
-  margin-bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.project-header > h2 {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin: 0;
+  color: var(--ink);
+  font-size: 1.2rem;
+  font-weight: 750;
+  letter-spacing: -0.035em;
+}
+
+.project-header > h2::before {
+  width: 4px;
+  height: 21px;
+  border-radius: 9px;
+  background: linear-gradient(180deg, #3c91a7, #276d8d);
+  content: "";
+}
+
+.project-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.filter-chip {
+  padding: 5px 11px;
+  border: 1px solid #d8e5ea;
+  border-radius: 999px;
+  background: #f8fbfc;
+  color: #5c7080;
+  font: inherit;
+  font-size: 0.76rem;
+  font-weight: 650;
+  cursor: pointer;
+  transition: background-color 150ms ease, border-color 150ms ease, color 150ms ease;
+}
+
+.filter-chip:hover {
+  border-color: #b7d2dc;
+  color: var(--accent);
+}
+
+.filter-chip.is-active {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: #fff;
 }
 
 #projects > .project {
   margin-top: 0;
+}
+
+#projects > .project[hidden] {
+  display: none;
 }
 
 .sample-badge {
@@ -498,7 +608,8 @@ main {
   transform: translateX(4px);
 }
 
-.links a {
+.links a,
+.copy-link-button {
   display: inline-flex;
   align-items: center;
   min-height: 42px;
@@ -507,13 +618,16 @@ main {
   border-radius: 11px;
   background: #f8fbfc;
   color: #28677f;
+  font: inherit;
   font-size: 0.9rem;
   font-weight: 700;
   text-decoration: none;
+  cursor: pointer;
   transition: background-color 160ms ease, border-color 160ms ease, transform 160ms ease;
 }
 
-.links a:hover {
+.links a:hover,
+.copy-link-button:hover {
   transform: translateY(-1px);
   border-color: #b8d6de;
   background: #edf6f8;
@@ -571,7 +685,112 @@ main {
 }
 
 .section-index-actions {
+  display: grid;
+  gap: 6px;
   margin-top: 8px;
+}
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --ink: #e4eef4;
+  --muted: #98aab8;
+  --accent: #5cb3cc;
+  --accent-soft: #1a3545;
+  --paper: #15232e;
+  --line: #263947;
+  --shadow: 0 18px 55px rgb(0 0 0 / 35%);
+}
+
+html[data-theme="dark"] body {
+  background: #0f1a22;
+  color: var(--ink);
+}
+
+html[data-theme="dark"] .card,
+html[data-theme="dark"] .detail-card {
+  border-color: #243847;
+  background: rgb(21 35 46 / 96%);
+}
+
+html[data-theme="dark"] .card > p,
+html[data-theme="dark"] .detail-card p,
+html[data-theme="dark"] .detail-card ul,
+html[data-theme="dark"] .project ul,
+html[data-theme="dark"] .credential-group ul {
+  color: #b7c8d4;
+}
+
+html[data-theme="dark"] .highlight-box,
+html[data-theme="dark"] .skill-item,
+html[data-theme="dark"] .project,
+html[data-theme="dark"] .education-record,
+html[data-theme="dark"] .credential-group {
+  border-color: #263a49;
+  background: linear-gradient(145deg, #182834, #14222c);
+}
+
+html[data-theme="dark"] .highlight-box strong,
+html[data-theme="dark"] .skill-heading,
+html[data-theme="dark"] .record-heading h3,
+html[data-theme="dark"] .credential-group strong {
+  color: #e2eef5;
+}
+
+html[data-theme="dark"] .highlight-box p,
+html[data-theme="dark"] .skill-note,
+html[data-theme="dark"] .record-detail,
+html[data-theme="dark"] .credential-summary {
+  color: #9cb0be;
+}
+
+html[data-theme="dark"] .project h3 {
+  color: #77c4da;
+}
+
+html[data-theme="dark"] .level,
+html[data-theme="dark"] .record-tags li,
+html[data-theme="dark"] .detail-tags li {
+  border-color: #2a4556;
+  background: #1c3442;
+  color: #8ad0e3;
+}
+
+html[data-theme="dark"] .skill-meter span {
+  background: #273b49;
+}
+
+html[data-theme="dark"] .filter-chip {
+  border-color: #2b4353;
+  background: #172733;
+  color: #a6bac7;
+}
+
+html[data-theme="dark"] .filter-chip.is-active {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: #0e1b24;
+}
+
+html[data-theme="dark"] .links a,
+html[data-theme="dark"] .copy-link-button {
+  border-color: #2a4353;
+  background: #172834;
+  color: #7bc7dc;
+}
+
+html[data-theme="dark"] .section-index ol {
+  border-color: #263b4a;
+  background: rgb(20 33 43 / 92%);
+}
+
+html[data-theme="dark"] .section-index a {
+  color: #9fb2c0;
+}
+
+html[data-theme="dark"] .theme-button {
+  border-color: #2c4657;
+  background: #182a37;
+  color: #cbe6ef;
 }
 
 footer {
@@ -787,10 +1006,12 @@ footer p {
   .section-index-actions {
     display: flex;
     justify-content: center;
+    gap: 8px;
     margin-top: 7px;
   }
 
-  .section-index-actions .print-button {
+  .section-index-actions .print-button,
+  .section-index-actions .theme-button {
     width: auto;
     min-height: 36px;
     padding: 6px 14px;
