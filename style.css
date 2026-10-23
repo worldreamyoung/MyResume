@@ -11,6 +11,7 @@ body {
   color: var(--navy);
   font-family: "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
   line-height: 1.7;
+  scroll-behavior: smooth;
 }
 
 .hero {
@@ -44,45 +45,46 @@ main {
 
 .section-index ol {
   display: grid;
-  gap: 8px;
+  gap: 4px;
   margin: 0;
-  padding: 12px 8px;
+  padding: 6px;
   list-style: none;
-  border: 1px solid rgb(14 40 65 / 8%);
-  border-radius: 16px;
-  background: rgb(255 255 255 / 90%);
-  box-shadow: 0 4px 16px rgb(14 40 65 / 10%);
-  backdrop-filter: blur(10px);
+  border-radius: 999px;
+  background: rgb(255 255 255 / 76%);
+  box-shadow: 0 2px 10px rgb(14 40 65 / 8%);
+  backdrop-filter: blur(8px);
 }
 
 .section-index a {
   display: flex;
   align-items: center;
-  gap: 10px;
-  min-width: 104px;
-  padding: 8px 10px;
-  border-radius: 10px;
-  color: var(--gray);
-  font-size: 0.82rem;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  color: #91a0af;
+  font-size: 0.68rem;
   font-weight: 600;
   text-decoration: none;
-  transition: background-color 160ms ease, color 160ms ease;
+  transition: background-color 160ms ease, color 160ms ease, transform 160ms ease;
 }
 
 .section-index a span:first-child {
-  color: #91a0af;
-  font-size: 0.7rem;
   font-variant-numeric: tabular-nums;
 }
 
 .section-index a:hover,
 .section-index a[aria-current="location"] {
-  background: #e8f3fb;
+  background: var(--blue);
   color: var(--blue);
 }
 
 .section-index a[aria-current="location"] span:first-child {
-  color: var(--blue);
+  color: #fff;
+}
+
+.section-index a:hover {
+  transform: scale(1.08);
 }
 
 main section[id] {
@@ -145,14 +147,13 @@ footer {
   .section-index ol {
     display: flex;
     justify-content: space-around;
-    gap: 2px;
-    padding: 6px;
+    gap: 4px;
+    padding: 5px;
   }
 
   .section-index a {
-    justify-content: center;
-    min-width: 0;
-    padding: 9px 10px;
+    width: 34px;
+    height: 34px;
   }
 
   .index-label {
@@ -172,12 +173,18 @@ footer {
   }
 
   .section-index a {
-    padding: 9px 7px;
+    width: 32px;
+    height: 32px;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
+  body {
+    scroll-behavior: auto;
+  }
+
   .section-index a {
     transition: none;
+    transform: none;
   }
 }
