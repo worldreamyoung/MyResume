@@ -130,22 +130,17 @@ body {
   font-size: 0.98rem;
 }
 
-.hero-actions {
-  position: absolute;
-  z-index: 2;
-  top: 22px;
-  right: max(24px, calc((100vw - 1160px) / 2));
-}
-
 .print-button {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
+  width: 100%;
   min-height: 42px;
   padding: 9px 15px;
-  border: 1px solid rgb(255 255 255 / 34%);
-  border-radius: 11px;
-  background: rgb(255 255 255 / 12%);
+  border: 1px solid #276d8d;
+  border-radius: 10px;
+  background: #276d8d;
   color: #fff;
   font: inherit;
   font-size: 0.84rem;
@@ -156,11 +151,11 @@ body {
 
 .print-button:hover {
   transform: translateY(-1px);
-  background: rgb(255 255 255 / 21%);
+  background: #1f5b77;
 }
 
 .print-button:focus-visible {
-  outline: 3px solid #aee0e8;
+  outline: 3px solid #87bfce;
   outline-offset: 3px;
 }
 
@@ -575,6 +570,10 @@ main {
   color: var(--accent);
 }
 
+.section-index-actions {
+  margin-top: 8px;
+}
+
 footer {
   padding: 4px 16px 38px;
   color: #8796a1;
@@ -740,7 +739,7 @@ footer p {
   }
 
   body {
-    padding-bottom: 74px;
+    padding-bottom: 122px;
   }
 }
 
@@ -785,10 +784,17 @@ footer p {
     font-size: 0.9rem;
   }
 
-  .hero-actions {
-    top: auto;
-    right: 14px;
-    bottom: 12px;
+  .section-index-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 7px;
+  }
+
+  .section-index-actions .print-button {
+    width: auto;
+    min-height: 36px;
+    padding: 6px 14px;
+    font-size: 0.78rem;
   }
 
   main {
@@ -876,8 +882,7 @@ footer p {
     print-color-adjust: exact;
   }
 
-  .section-index,
-  .hero-actions {
+  .section-index {
     display: none !important;
   }
 
