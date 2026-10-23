@@ -7,15 +7,17 @@ HTML · CSS만으로 만든 이력서 웹페이지 템플릿입니다.
 
 | 파일 | 역할 |
 | --- | --- |
-| `index.html` | 이력서 본문 (✏️ 이 파일만 수정) |
-| `style.css` | 디자인 (수정하지 않아도 됨) |
+| `index.html` | 이력서 본문과 프로젝트 목록 |
+| `project-azure-ml.html` | Azure ML 이미지 분류 프로젝트 상세 페이지 |
+| `project-rag-chatbot.html` | RAG 챗봇 프로젝트 상세 페이지 |
+| `style.css` | 전체 페이지 디자인 |
 | `profile.svg` | 프로필 이미지 (내 사진으로 교체 가능) |
 | `.github/workflows/ci.yml` | push 할 때 HTML 문법 자동 검사 |
 | `.htmlvalidate.json` | HTML 검사 규칙 설정 |
 
 ## 수정 · 배포 6단계
 
-1. **index.html 수정** — `<!-- 여기를 내 내용으로 수정 -->` 주석 바로 아래 줄의 글자만 바꿉니다. 태그(`<h3>`, `</li>` 등)는 지우지 마세요.
+1. **내용 수정** — 이력서와 프로젝트 목록은 `index.html`, 프로젝트 상세 내용은 해당 `project-*.html` 파일에서 수정합니다. 태그(`<h3>`, `</li>` 등)는 지우지 마세요.
 2. **더블클릭으로 확인** — `index.html`을 더블클릭해 브라우저에서 화면을 확인합니다.
 3. **커밋** — `git add .` → `git commit -m "이력서 내용 수정"`
 4. **push** — `git push`
