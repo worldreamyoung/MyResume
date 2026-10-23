@@ -282,12 +282,41 @@ main {
 }
 
 .project {
+  display: flex;
+  flex-direction: column;
   margin-top: 14px;
   padding: 21px 22px;
   border: 1px solid var(--line);
   border-radius: 15px;
   background: linear-gradient(135deg, #fff, #f9fbfc);
   transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+#projects {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+#projects > h2 {
+  grid-column: 1 / -1;
+  margin-bottom: 0;
+}
+
+#projects > .project {
+  margin-top: 0;
+}
+
+.sample-badge {
+  align-self: flex-start;
+  margin-bottom: 9px;
+  padding: 3px 8px;
+  border: 1px solid #eadfbe;
+  border-radius: 999px;
+  background: #fff8e7;
+  color: #856c37;
+  font-size: 0.67rem;
+  font-weight: 750;
 }
 
 .project:first-of-type {
@@ -458,7 +487,8 @@ main {
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  margin-top: 15px;
+  margin-top: auto;
+  padding-top: 15px;
   color: var(--accent);
   font-size: 0.83rem;
   font-weight: 750;
@@ -773,6 +803,11 @@ footer p {
 
   .project {
     padding: 18px;
+  }
+
+  #projects {
+    grid-template-columns: 1fr;
+    gap: 12px;
   }
 
   .education-record {

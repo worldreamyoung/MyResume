@@ -10,6 +10,8 @@ HTML · CSS만으로 만든 이력서 웹페이지 템플릿입니다.
 | `index.html` | 이력서 본문과 프로젝트 목록 |
 | `project-azure-ml.html` | Azure ML 이미지 분류 프로젝트 상세 페이지 |
 | `project-rag-chatbot.html` | RAG 챗봇 프로젝트 상세 페이지 |
+| `project-customer-ai.html` | 고객 문의 분류 프로젝트 예시 상세 페이지 |
+| `project-demand-forecast.html` | 매출 수요 예측 프로젝트 예시 상세 페이지 |
 | `style.css` | 전체 페이지 디자인 |
 | `profile.svg` | 프로필 이미지 (내 사진으로 교체 가능) |
 | `.github/workflows/ci.yml` | push 할 때 HTML 문법 자동 검사 |
@@ -29,6 +31,8 @@ HTML · CSS만으로 만든 이력서 웹페이지 템플릿입니다.
 ## 프로필 사진 바꾸기
 
 사진 파일(예: `me.jpg`)을 이 폴더에 넣고, `index.html`의 `src="profile.svg"`를 `src="me.jpg"`로 바꿉니다.
+
+> 편입 이력과 추가된 두 프로젝트는 화면 구성용 예시입니다. 공개하기 전에 본인의 실제 학교, 기간, 프로젝트 내용으로 바꿔 주세요.
 
 ## 주의
 
