@@ -18,8 +18,19 @@
       <!-- 여기를 내 내용으로 수정 -->
       <p>클라우드 위에서 AI 서비스를 만들고 운영하는 엔지니어가 되고 싶습니다.</p>
     </header>
+    <nav class="section-index" aria-label="페이지 섹션">
+      <ol>
+        <li><a href="#about" aria-current="location"><span>01</span><span class="index-label">About</span></a></li>
+        <li><a href="#skills"><span>02</span><span class="index-label">Skills</span></a></li>
+        <li><a href="#projects"><span>03</span><span class="index-label">Projects</span></a></li>
+        <li><a href="#education"><span>04</span><span class="index-label">Education</span></a></li>
+        <li><a href="#certifications"><span>05</span><span class="index-label">Certifications</span></a></li>
+        <li><a href="#awards"><span>06</span><span class="index-label">Awards</span></a></li>
+        <li><a href="#links"><span>07</span><span class="index-label">Links</span></a></li>
+      </ol>
+    </nav>
     <main>
-      <section class="card">
+      <section class="card" id="about">
         <h2>About</h2>
         <!-- 여기를 내 내용으로 수정 -->
         <p>
@@ -28,7 +39,7 @@
           GitHub로 코드를 관리하고 팀과 공유하며 함께 성장하는 엔지니어가 되겠습니다.
         </p>
       </section>
-      <section class="card">
+      <section class="card" id="skills">
         <h2>Skills</h2>
         <ul class="skills">
           <!-- 여기를 내 내용으로 수정 -->
@@ -39,7 +50,7 @@
           <li>Azure AI · OpenAI <span class="level">기초</span></li>
         </ul>
       </section>
-      <section class="card">
+      <section class="card" id="projects">
         <h2>Projects</h2>
         <article class="project">
           <!-- 여기를 내 내용으로 수정 -->
@@ -70,7 +81,7 @@
           </ul>
         </article>
       </section>
-      <section class="card">
+      <section class="card" id="education">
         <h2>Education</h2>
         <ul>
           <!-- 여기를 내 내용으로 수정 -->
@@ -79,7 +90,7 @@
           <li>청년취업사관학교(SeSAC) 마포캠퍼스 [Microsoft] AI 엔지니어 과정 수료 (2026.10 ~ 2027.02, 600시간)</li>
         </ul>
       </section>
-      <section class="card">
+      <section class="card" id="certifications">
         <h2>Certifications</h2>
         <ul>
           <!-- 여기를 내 내용으로 수정 -->
@@ -94,7 +105,7 @@
           <li>데이터분석준전문가 (ADsP, 한국데이터산업진흥원)</li>
         </ul>
       </section>
-      <section class="card">
+      <section class="card" id="awards">
         <h2>Awards</h2>
         <ul>
           <!-- 여기를 내 내용으로 수정 -->
@@ -103,7 +114,7 @@
           <li>교내 캡스톤 디자인 경진대회 우수상 — 클라우드 기반 지능형 문서 검색 시스템 (2025.11)</li>
         </ul>
       </section>
-      <section class="card">
+      <section class="card" id="links">
         <h2>Links</h2>
         <ul class="links">
           <li>
@@ -121,5 +132,28 @@
       <!-- 여기를 내 내용으로 수정 -->
       <p>© 2027 김마포</p>
     </footer>
+    <script>
+      const sections = document.querySelectorAll("main section[id]");
+      const indexLinks = document.querySelectorAll(".section-index a");
+
+      const sectionObserver = new IntersectionObserver((entries) => {
+        const visibleSections = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+
+        if (visibleSections.length === 0) return;
+
+        const activeId = visibleSections[0].target.id;
+        indexLinks.forEach((link) => {
+          if (link.hash === `#${activeId}`) {
+            link.setAttribute("aria-current", "location");
+          } else {
+            link.removeAttribute("aria-current");
+          }
+        });
+      }, { rootMargin: "-20% 0px -55% 0px", threshold: [0, 0.25, 0.5, 0.75] });
+
+      sections.forEach((section) => sectionObserver.observe(section));
+    </script>
   </body>
 </html>
