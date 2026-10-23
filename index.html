@@ -17,7 +17,10 @@
       <!-- 여기를 내 내용으로 수정 -->
       <h2>AI 엔지니어 (Azure 클라우드) 지망생</h2>
       <!-- 여기를 내 내용으로 수정 -->
-      <p>클라우드 위에서 AI 서비스를 만들고 운영하는 엔지니어가 되고 싶습니다.</p>
+      <p class="hero-description">클라우드 위에서 AI 서비스를 만들고 운영하는 엔지니어가 되고 싶습니다.</p>
+      <div class="hero-actions">
+        <button class="print-button" id="print-resume" type="button">PDF로 저장 <span aria-hidden="true">↓</span></button>
+      </div>
     </header>
     <nav class="section-index" aria-label="페이지 섹션">
       <ol>
@@ -197,6 +200,9 @@
     <script>
       const sections = document.querySelectorAll("main section[id]");
       const indexLinks = document.querySelectorAll(".section-index a");
+      const printButton = document.querySelector("#print-resume");
+
+      printButton.addEventListener("click", () => window.print());
 
       const sectionObserver = new IntersectionObserver((entries) => {
         const visibleSections = entries
