@@ -302,6 +302,60 @@ main {
   color: #65a0aa;
 }
 
+.education-records {
+  display: grid;
+  gap: 12px;
+}
+
+.education-record {
+  padding: 18px 20px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: linear-gradient(135deg, #fff, #f9fbfc);
+}
+
+.record-label {
+  margin: 0 0 5px;
+  color: #428296;
+  font-size: 0.7rem;
+  font-weight: 750;
+  letter-spacing: 0.06em;
+}
+
+.record-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.record-heading h3 {
+  margin: 0;
+  color: #2c4658;
+  font-size: 0.98rem;
+  font-weight: 750;
+  letter-spacing: -0.025em;
+  word-break: keep-all;
+}
+
+.record-period {
+  flex: none;
+  color: #82909b;
+  font-size: 0.76rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.record-detail {
+  margin: 5px 0 0;
+  color: #657684;
+  font-size: 0.86rem;
+  word-break: keep-all;
+}
+
+.record-detail + .record-detail {
+  margin-top: 2px;
+}
+
 .project-more {
   display: inline-flex;
   align-items: center;
@@ -615,6 +669,16 @@ footer p {
 
   .project {
     padding: 18px;
+  }
+
+  .education-record {
+    padding: 16px;
+  }
+
+  .record-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 2px;
   }
 
   .detail-hero {
