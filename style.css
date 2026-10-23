@@ -356,6 +356,66 @@ main {
   margin-top: 2px;
 }
 
+.record-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.record-tags li {
+  padding: 4px 9px;
+  border-radius: 999px;
+  background: #eaf4f6;
+  color: #416e7d;
+  font-size: 0.72rem;
+  font-weight: 650;
+}
+
+.credential-groups {
+  display: grid;
+  gap: 12px;
+}
+
+.credential-group {
+  padding: 17px 19px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: linear-gradient(135deg, #fff, #f9fbfc);
+}
+
+.credential-summary {
+  margin: 0 0 11px;
+  color: #687a87;
+  font-size: 0.84rem;
+}
+
+.credential-group ul {
+  display: grid;
+  gap: 7px;
+  margin: 0;
+  padding-left: 18px;
+  color: #465d6e;
+  font-size: 0.88rem;
+}
+
+.credential-group li::marker {
+  color: #65a0aa;
+}
+
+.credential-group strong {
+  color: #2c5367;
+}
+
+.section-intro {
+  margin: -5px 0 17px;
+  color: #647688;
+  font-size: 0.9rem;
+  word-break: keep-all;
+}
+
 .project-more {
   display: inline-flex;
   align-items: center;
