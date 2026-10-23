@@ -1,13 +1,13 @@
 /* 이력서 디자인 — 교육생은 수정하지 않아도 됩니다 */
 :root {
-  --blue: #1686d9;
-  --navy: #23415d;
-  --gray: #687b8e;
+  --blue: #5b8f84;
+  --navy: #385b56;
+  --gray: #71837c;
 }
 
 body {
   margin: 0;
-  background-color: #edf7ff;
+  background-color: #f8f5e9;
   background-image: url("background.svg");
   background-position: center center;
   background-repeat: no-repeat;
@@ -21,13 +21,13 @@ body {
 
 .hero {
   padding: 48px 16px;
-  background: linear-gradient(135deg, #426b91, #48a3e6);
+  background: linear-gradient(135deg, #648c7d, #91b79e);
   color: #fff;
   text-align: center;
 }
 
 .photo {
-  border: 4px solid #fff;
+  border: 4px solid #fffdf5;
   border-radius: 50%;
   object-fit: cover;
 }
@@ -54,10 +54,10 @@ main {
   margin: 0;
   padding: 12px 8px;
   list-style: none;
-  border: 1px solid rgb(35 65 93 / 7%);
+  border: 1px solid rgb(56 91 86 / 10%);
   border-radius: 16px;
-  background: rgb(255 255 255 / 94%);
-  box-shadow: 0 4px 18px rgb(35 65 93 / 8%);
+  background: rgb(255 253 245 / 95%);
+  box-shadow: 0 4px 18px rgb(56 91 86 / 10%);
   backdrop-filter: blur(10px);
 }
 
@@ -83,7 +83,7 @@ main {
 
 .section-index a:hover,
 .section-index a[aria-current="location"] {
-  background: #eaf5ff;
+  background: #e9f1df;
   color: var(--blue);
 }
 
@@ -103,13 +103,13 @@ main section[id] {
 .project {
   padding: 20px;
   border-radius: 14px;
-  background: #fff;
-  box-shadow: 0 4px 16px rgb(14 40 65 / 10%);
+  background: rgb(255 254 248 / 95%);
+  box-shadow: 0 4px 16px rgb(56 91 86 / 10%);
 }
 
 .project {
   margin-top: 12px;
-  border: 1px solid #d5e2f0;
+  border: 1px solid #d5e3d5;
   box-shadow: none;
 }
 
