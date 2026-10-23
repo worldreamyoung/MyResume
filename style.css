@@ -184,26 +184,63 @@ main {
   list-style: none;
 }
 
-.skills li {
-  display: inline-flex;
-  align-items: center;
-  gap: 9px;
-  padding: 9px 13px;
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+  gap: 12px;
+}
+
+.skill-item {
+  min-width: 0;
+  padding: 16px;
   border: 1px solid #e1eaee;
-  border-radius: 11px;
-  background: #f8fbfc;
+  border-radius: 13px;
+  background: linear-gradient(145deg, #fbfdfe, #f5f9fa);
+}
+
+.skill-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
   color: #30495b;
   font-size: 0.9rem;
   font-weight: 650;
 }
 
 .level {
-  padding: 2px 8px;
+  flex: none;
+  padding: 3px 8px;
   border-radius: 999px;
   background: #e6f2f4;
   color: #397583;
   font-size: 0.7rem;
   font-weight: 700;
+}
+
+.skill-meter {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  margin-top: 15px;
+}
+
+.skill-meter span {
+  height: 6px;
+  border-radius: 999px;
+  background: #e2e9ec;
+}
+
+.skill-meter .filled {
+  background: linear-gradient(90deg, #43889a, #65acb2);
+}
+
+.skill-note {
+  margin: 10px 0 0;
+  color: #72818d;
+  font-size: 0.76rem;
+  line-height: 1.5;
+  word-break: keep-all;
 }
 
 .project {
